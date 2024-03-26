@@ -1,0 +1,23 @@
+# Ignore system files
+.DS_Store
+
+# Ignore temporary files
+*.tmp
+
+# Ignore compiled binaries
+*.exe
+*.dll
+
+# Ignore log files
+*.log
+
+# Ignore package files
+*.tar.gz
+*.zip
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Ignore dependency directories
+/node_modules/
