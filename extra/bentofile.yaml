@@ -1,11 +1,8 @@
 service: 'service:MovieRecommender'
-labels:
-  owner: nikitaag
 
 include:
-  - '*.py'
-  - 'linear_regression_model.joblib'
-  - 'ml-latest-small/ratings.csv'
+  - "*.py"
+  - "ml-latest-small/ratings.csv"
 
 python:
   packages:
@@ -13,3 +10,7 @@ python:
     - numpy
     - scikit-learn
     - pandas
+    - bentoml
+
+models:
+  - movie_model:latest

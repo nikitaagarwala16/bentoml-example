@@ -20,4 +20,4 @@
 .idea/
 
 # Ignore dependency directories
-/node_modules/
+__pycache__

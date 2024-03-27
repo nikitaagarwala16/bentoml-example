@@ -1,10 +1,8 @@
 import pandas as pd
-import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 import joblib  # For saving the model, compatible with BentoML
-import bentoml
 
 def load_and_prepare_data(filepath):
     ratings = pd.read_csv(filepath)
@@ -30,8 +28,6 @@ def main():
     X_train, X_test, y_train, y_test = load_and_prepare_data(filepath)
     
     model = train_and_evaluate_model(X_train, X_test, y_train, y_test)
-
-    saved_model = bentoml.sklearn.save_model("movie_model", model)
     
     # Save the model for later use with BentoML
     save_model_filename = 'linear_regression_model.joblib'
